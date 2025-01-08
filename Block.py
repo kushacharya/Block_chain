@@ -4,10 +4,10 @@ from operator import index
 
 
 class Block:
-    def __init__(self, ind, transactions,previous_hash):
+    def __init__(self, ind,data, transactions,previous_hash):
         self.ind = ind
         self.timestamp = time.time()
-        # self.data = data
+        self.data = data
         self.nonce = 0
         self.transactions = transactions
         self.previous_hash = previous_hash
