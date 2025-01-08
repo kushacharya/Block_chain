@@ -17,7 +17,7 @@ class Block:
 
 
     def calculatehash(self):
-        block_data = f"{self.ind}{self.timestamp}{[str(tx) for tx in self.transactions]}{self.nonce}{self.nonce}"
+        block_data = f"{self.ind}{self.timestamp}{[str(tx) for tx in self.transactions]}{self.nonce}"
         return hashlib.sha256(block_data.encode()).hexdigest()
 
     def mine_block(self,difficulty):
