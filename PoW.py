@@ -3,7 +3,7 @@ import time
 
 class ProofOfWork:
     def __init__(self, difficulty):
-        self.difficulty = difficulty  # Number of leading zeros required in hash
+        self.difficulty = difficulty
 
     def mine_block(self, block_data):
         nonce = 0
@@ -18,7 +18,6 @@ class ProofOfWork:
                 return nonce, block_hash
             nonce += 1
 
-# Ask user for difficulty level and number of blocks to mine
 difficulty_level = int(input("Enter difficulty level: "))
 num_blocks = int(input("Enter number of blocks to mine: "))
 
